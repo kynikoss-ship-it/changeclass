@@ -1,0 +1,479 @@
+<html lang="ko"><head>
+<meta charset="UTF-8">
+<title>대체수업 · 보강 관리</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script id="embedded-data" type="application/json">[{"teacher":"강봉문","day":"화","period":"1","subject":"피지컬컴퓨팅","cls":"1-1"},{"teacher":"강봉문","day":"화","period":"2","subject":"피지컬컴퓨팅","cls":"1-3"},{"teacher":"강봉문","day":"화","period":"4","subject":"피지컬컴퓨팅","cls":"1-2"},{"teacher":"강봉문","day":"화","period":"5","subject":"피지컬컴퓨팅","cls":"1-6"},{"teacher":"강봉문","day":"화","period":"7","subject":"피지컬컴퓨팅","cls":"1-4"},{"teacher":"강봉문","day":"목","period":"1","subject":"피지컬컴퓨팅","cls":"1-5"},{"teacher":"강봉문","day":"목","period":"2","subject":"피지컬컴퓨팅","cls":"1-4"},{"teacher":"강봉문","day":"목","period":"6","subject":"피지컬컴퓨팅","cls":"1-1"},{"teacher":"강봉문","day":"목","period":"7","subject":"피지컬컴퓨팅","cls":"1-2"},{"teacher":"강봉문","day":"금","period":"1","subject":"피지컬컴퓨팅","cls":"1-3"},{"teacher":"강봉문","day":"금","period":"2","subject":"피지컬컴퓨팅","cls":"1-5"},{"teacher":"강봉문","day":"금","period":"4","subject":"피지컬컴퓨팅","cls":"1-6"},{"teacher":"강송지","day":"월","period":"1","subject":"자율·자치활동","cls":"1-2"},{"teacher":"강송지","day":"월","period":"3","subject":"주제선택활동","cls":"1-2"},{"teacher":"강송지","day":"월","period":"4","subject":"주제선택활동","cls":"1-2"},{"teacher":"강송지","day":"월","period":"5","subject":"수학","cls":"3-6"},{"teacher":"강송지","day":"월","period":"5","subject":"동아리활동","cls":"1-2"},{"teacher":"강송지","day":"월","period":"7","subject":"수학","cls":"1-1"},{"teacher":"강송지","day":"화","period":"1","subject":"수학","cls":"3-5"},{"teacher":"강송지","day":"화","period":"2","subject":"수학","cls":"1-2"},{"teacher":"강송지","day":"화","period":"4","subject":"수학","cls":"1-3"},{"teacher":"강송지","day":"화","period":"5","subject":"수학","cls":"3-4"},{"teacher":"강송지","day":"화","period":"7","subject":"수학","cls":"3-6"},{"teacher":"강송지","day":"수","period":"2","subject":"수학","cls":"3-4"},{"teacher":"강송지","day":"수","period":"2","subject":"진로탐색활동","cls":"1-2"},{"teacher":"강송지","day":"수","period":"3","subject":"수학","cls":"3-5"},{"teacher":"강송지","day":"수","period":"3","subject":"주제선택활동","cls":"1-2"},{"teacher":"강송지","day":"수","period":"4","subject":"수학","cls":"3-6"},{"teacher":"강송지","day":"수","period":"4","subject":"주제선택활동","cls":"1-2"},{"teacher":"강송지","day":"목","period":"1","subject":"수학","cls":"1-2"},{"teacher":"강송지","day":"목","period":"3","subject":"수학","cls":"3-5"},{"teacher":"강송지","day":"목","period":"5","subject":"수학","cls":"1-3"},{"teacher":"강송지","day":"목","period":"6","subject":"수학","cls":"3-4"},{"teacher":"강송지","day":"금","period":"2","subject":"수학","cls":"3-6"},{"teacher":"강송지","day":"금","period":"4","subject":"수학","cls":"3-5"},{"teacher":"강송지","day":"금","period":"4","subject":"진로탐색활동","cls":"1-2"},{"teacher":"강송지","day":"금","period":"5","subject":"수학","cls":"3-4"},{"teacher":"강송지","day":"금","period":"5","subject":"동아리활동","cls":"1-2"},{"teacher":"강송지","day":"금","period":"6","subject":"수학","cls":"1-1"},{"teacher":"공영은","day":"월","period":"1","subject":"자율·자치활동","cls":"2-2"},{"teacher":"공영은","day":"월","period":"6","subject":"동아리활동","cls":"2-2"},{"teacher":"공영은","day":"월","period":"7","subject":"사회","cls":"1-4"},{"teacher":"공영은","day":"화","period":"3","subject":"사회","cls":"1-6"},{"teacher":"공영은","day":"화","period":"4","subject":"사회","cls":"1-4"},{"teacher":"공영은","day":"화","period":"6","subject":"사회","cls":"1-3"},{"teacher":"공영은","day":"화","period":"7","subject":"사회","cls":"1-1"},{"teacher":"공영은","day":"수","period":"1","subject":"사회","cls":"1-5"},{"teacher":"공영은","day":"수","period":"2","subject":"사회","cls":"1-3"},{"teacher":"공영은","day":"수","period":"4","subject":"역사","cls":"2-4"},{"teacher":"공영은","day":"수","period":"5","subject":"사회","cls":"1-2"},{"teacher":"공영은","day":"목","period":"1","subject":"역사","cls":"2-2"},{"teacher":"공영은","day":"목","period":"2","subject":"역사","cls":"2-5"},{"teacher":"공영은","day":"목","period":"3","subject":"사회","cls":"1-2"},{"teacher":"공영은","day":"목","period":"5","subject":"역사","cls":"2-6"},{"teacher":"공영은","day":"목","period":"7","subject":"역사","cls":"2-1"},{"teacher":"공영은","day":"금","period":"1","subject":"사회","cls":"1-1"},{"teacher":"공영은","day":"금","period":"2","subject":"역사","cls":"2-3"},{"teacher":"공영은","day":"금","period":"3","subject":"사회","cls":"1-6"},{"teacher":"공영은","day":"금","period":"6","subject":"동아리활동","cls":"2-2"},{"teacher":"공영은","day":"금","period":"6","subject":"사회","cls":"1-5"},{"teacher":"구화빈","day":"월","period":"1","subject":"자율·자치활동","cls":"1-3"},{"teacher":"구화빈","day":"월","period":"2","subject":"국어","cls":"3-1"},{"teacher":"구화빈","day":"월","period":"3","subject":"주제선택활동","cls":"1-3"},{"teacher":"구화빈","day":"월","period":"4","subject":"주제선택활동","cls":"1-3"},{"teacher":"구화빈","day":"월","period":"5","subject":"동아리활동","cls":"1-3"},{"teacher":"구화빈","day":"월","period":"6","subject":"국어","cls":"1-2"},{"teacher":"구화빈","day":"월","period":"7","subject":"국어","cls":"1-3"},{"teacher":"구화빈","day":"화","period":"1","subject":"국어","cls":"1-5"},{"teacher":"구화빈","day":"화","period":"2","subject":"국어","cls":"3-2"},{"teacher":"구화빈","day":"화","period":"3","subject":"국어","cls":"1-1"},{"teacher":"구화빈","day":"화","period":"5","subject":"진로탐색활동","cls":"1-3"},{"teacher":"구화빈","day":"화","period":"6","subject":"국어","cls":"3-4"},{"teacher":"구화빈","day":"화","period":"7","subject":"국어","cls":"3-3"},{"teacher":"구화빈","day":"수","period":"1","subject":"진로탐색활동","cls":"1-3"},{"teacher":"구화빈","day":"수","period":"3","subject":"주제선택활동","cls":"1-3"},{"teacher":"구화빈","day":"수","period":"4","subject":"주제선택활동","cls":"1-3"},{"teacher":"구화빈","day":"목","period":"2","subject":"국어","cls":"1-6"},{"teacher":"구화빈","day":"목","period":"3","subject":"국어","cls":"1-3"},{"teacher":"구화빈","day":"목","period":"5","subject":"국어","cls":"3-5"},{"teacher":"구화빈","day":"목","period":"7","subject":"국어","cls":"3-6"},{"teacher":"구화빈","day":"금","period":"1","subject":"국어","cls":"1-2"},{"teacher":"구화빈","day":"금","period":"3","subject":"국어","cls":"1-4"},{"teacher":"구화빈","day":"금","period":"5","subject":"동아리활동","cls":"1-3"},{"teacher":"구화빈","day":"금","period":"7","subject":"국어","cls":"1-1"},{"teacher":"권태훈","day":"월","period":"2","subject":"음악","cls":"1-1"},{"teacher":"권태훈","day":"월","period":"3","subject":"음악","cls":"3-4"},{"teacher":"권태훈","day":"월","period":"5","subject":"음악","cls":"2-2"},{"teacher":"권태훈","day":"월","period":"6","subject":"음악","cls":"3-1"},{"teacher":"권태훈","day":"월","period":"7","subject":"음악","cls":"1-5"},{"teacher":"권태훈","day":"화","period":"2","subject":"음악","cls":"2-1"},{"teacher":"권태훈","day":"화","period":"3","subject":"음악","cls":"2-3"},{"teacher":"권태훈","day":"화","period":"4","subject":"음악","cls":"2-5"},{"teacher":"권태훈","day":"화","period":"6","subject":"음악","cls":"2-4"},{"teacher":"권태훈","day":"화","period":"7","subject":"음악","cls":"2-6"},{"teacher":"권태훈","day":"수","period":"1","subject":"음악","cls":"2-1"},{"teacher":"권태훈","day":"수","period":"2","subject":"음악","cls":"3-2"},{"teacher":"권태훈","day":"수","period":"4","subject":"음악","cls":"3-5"},{"teacher":"권태훈","day":"수","period":"5","subject":"음악","cls":"3-6"},{"teacher":"권태훈","day":"목","period":"2","subject":"음악","cls":"2-2"},{"teacher":"권태훈","day":"목","period":"3","subject":"음악","cls":"2-4"},{"teacher":"권태훈","day":"목","period":"4","subject":"음악","cls":"2-6"},{"teacher":"권태훈","day":"목","period":"6","subject":"음악","cls":"1-4"},{"teacher":"권태훈","day":"목","period":"7","subject":"음악","cls":"2-5"},{"teacher":"권태훈","day":"금","period":"1","subject":"음악","cls":"2-3"},{"teacher":"권태훈","day":"금","period":"3","subject":"음악","cls":"3-3"},{"teacher":"권태훈","day":"금","period":"4","subject":"음악","cls":"1-3"},{"teacher":"권태훈","day":"금","period":"6","subject":"음악","cls":"1-2"},{"teacher":"권태훈","day":"금","period":"7","subject":"음악","cls":"1-6"},{"teacher":"김민주","day":"월","period":"1","subject":"자율활동","cls":"3-2"},{"teacher":"김민주","day":"월","period":"2","subject":"미술","cls":"2-2"},{"teacher":"김민주","day":"월","period":"3","subject":"미술","cls":"2-6"},{"teacher":"김민주","day":"월","period":"5","subject":"미술","cls":"2-3"},{"teacher":"김민주","day":"월","period":"6","subject":"미술","cls":"3-6"},{"teacher":"김민주","day":"월","period":"7","subject":"동아리활동","cls":"3-2"},{"teacher":"김민주","day":"월","period":"7","subject":"미술","cls":"2-4"},{"teacher":"김민주","day":"화","period":"1","subject":"미술","cls":"3-2"},{"teacher":"김민주","day":"화","period":"3","subject":"미술","cls":"3-4"},{"teacher":"김민주","day":"화","period":"4","subject":"미술","cls":"2-1"},{"teacher":"김민주","day":"화","period":"5","subject":"미술","cls":"2-5"},{"teacher":"김민주","day":"화","period":"7","subject":"미술","cls":"3-5"},{"teacher":"김민주","day":"수","period":"1","subject":"미술","cls":"2-4"},{"teacher":"김민주","day":"수","period":"2","subject":"미술","cls":"3-3"},{"teacher":"김민주","day":"수","period":"4","subject":"미술","cls":"2-5"},{"teacher":"김민주","day":"수","period":"5","subject":"미술","cls":"3-1"},{"teacher":"김민주","day":"목","period":"1","subject":"미술","cls":"2-3"},{"teacher":"김민주","day":"목","period":"3","subject":"미술","cls":"3-2"},{"teacher":"김민주","day":"목","period":"4","subject":"미술","cls":"3-5"},{"teacher":"김민주","day":"목","period":"6","subject":"미술","cls":"2-2"},{"teacher":"김민주","day":"목","period":"7","subject":"미술","cls":"2-6"},{"teacher":"김민주","day":"금","period":"1","subject":"미술","cls":"3-4"},{"teacher":"김민주","day":"금","period":"2","subject":"미술","cls":"3-1"},{"teacher":"김민주","day":"금","period":"3","subject":"미술","cls":"3-6"},{"teacher":"김민주","day":"금","period":"5","subject":"미술","cls":"3-3"},{"teacher":"김민주","day":"금","period":"7","subject":"동아리활동","cls":"3-2"},{"teacher":"김민주","day":"금","period":"7","subject":"미술","cls":"2-1"},{"teacher":"김성민","day":"월","period":"1","subject":"자율·자치활동","cls":"2-5"},{"teacher":"김성민","day":"월","period":"2","subject":"역사","cls":"3-3"},{"teacher":"김성민","day":"월","period":"4","subject":"역사","cls":"2-1"},{"teacher":"김성민","day":"월","period":"5","subject":"역사","cls":"2-6"},{"teacher":"김성민","day":"월","period":"6","subject":"역사","cls":"3-4"},{"teacher":"김성민","day":"월","period":"6","subject":"동아리활동","cls":"2-5"},{"teacher":"김성민","day":"화","period":"2","subject":"역사","cls":"3-1"},{"teacher":"김성민","day":"화","period":"3","subject":"역사","cls":"3-3"},{"teacher":"김성민","day":"화","period":"4","subject":"역사","cls":"3-5"},{"teacher":"김성민","day":"화","period":"6","subject":"역사","cls":"2-5"},{"teacher":"김성민","day":"화","period":"7","subject":"역사","cls":"3-2"},{"teacher":"김성민","day":"수","period":"1","subject":"역사","cls":"2-6"},{"teacher":"김성민","day":"수","period":"2","subject":"역사","cls":"2-5"},{"teacher":"김성민","day":"수","period":"3","subject":"역사","cls":"2-2"},{"teacher":"김성민","day":"수","period":"5","subject":"역사","cls":"2-3"},{"teacher":"김성민","day":"목","period":"2","subject":"역사","cls":"3-2"},{"teacher":"김성민","day":"목","period":"3","subject":"역사","cls":"3-4"},{"teacher":"김성민","day":"목","period":"4","subject":"역사","cls":"3-6"},{"teacher":"김성민","day":"목","period":"6","subject":"역사","cls":"2-3"},{"teacher":"김성민","day":"목","period":"7","subject":"역사","cls":"2-4"},{"teacher":"김성민","day":"금","period":"1","subject":"역사","cls":"3-6"},{"teacher":"김성민","day":"금","period":"2","subject":"역사","cls":"2-4"},{"teacher":"김성민","day":"금","period":"3","subject":"역사","cls":"2-1"},{"teacher":"김성민","day":"금","period":"5","subject":"역사","cls":"3-1"},{"teacher":"김성민","day":"금","period":"6","subject":"역사","cls":"3-5"},{"teacher":"김성민","day":"금","period":"6","subject":"동아리활동","cls":"2-5"},{"teacher":"김성민","day":"금","period":"7","subject":"역사","cls":"2-2"},{"teacher":"김영룡","day":"월","period":"1","subject":"자율활동","cls":"3-6"},{"teacher":"김영룡","day":"월","period":"2","subject":"국어","cls":"3-6"},{"teacher":"김영룡","day":"월","period":"4","subject":"국어","cls":"3-5"},{"teacher":"김영룡","day":"월","period":"5","subject":"국어","cls":"3-3"},{"teacher":"김영룡","day":"월","period":"6","subject":"국어","cls":"3-2"},{"teacher":"김영룡","day":"월","period":"7","subject":"동아리활동","cls":"3-6"},{"teacher":"김영룡","day":"화","period":"3","subject":"국어","cls":"3-5"},{"teacher":"김영룡","day":"화","period":"4","subject":"국어","cls":"3-1"},{"teacher":"김영룡","day":"화","period":"6","subject":"국어","cls":"3-6"},{"teacher":"김영룡","day":"수","period":"1","subject":"국어","cls":"3-2"},{"teacher":"김영룡","day":"수","period":"2","subject":"국어","cls":"3-1"},{"teacher":"김영룡","day":"수","period":"3","subject":"국어","cls":"3-3"},{"teacher":"김영룡","day":"수","period":"5","subject":"국어","cls":"3-4"},{"teacher":"김영룡","day":"목","period":"1","subject":"국어","cls":"3-4"},{"teacher":"김영룡","day":"목","period":"2","subject":"국어","cls":"3-3"},{"teacher":"김영룡","day":"목","period":"4","subject":"국어","cls":"3-2"},{"teacher":"김영룡","day":"목","period":"6","subject":"국어","cls":"3-1"},{"teacher":"김영룡","day":"금","period":"2","subject":"국어","cls":"3-4"},{"teacher":"김영룡","day":"금","period":"4","subject":"국어","cls":"3-6"},{"teacher":"김영룡","day":"금","period":"5","subject":"국어","cls":"3-5"},{"teacher":"김영룡","day":"금","period":"7","subject":"동아리활동","cls":"3-6"},{"teacher":"김정환","day":"월","period":"1","subject":"자율·자치활동","cls":"1-5"},{"teacher":"김정환","day":"월","period":"2","subject":"영어","cls":"1-5"},{"teacher":"김정환","day":"월","period":"3","subject":"주제선택활동","cls":"1-5"},{"teacher":"김정환","day":"월","period":"4","subject":"영어","cls":"3-1"},{"teacher":"김정환","day":"월","period":"4","subject":"주제선택활동","cls":"1-5"},{"teacher":"김정환","day":"월","period":"5","subject":"영어","cls":"3-5"},{"teacher":"김정환","day":"월","period":"5","subject":"동아리활동","cls":"1-5"},{"teacher":"김정환","day":"월","period":"6","subject":"진로탐색활동","cls":"1-5"},{"teacher":"김정환","day":"화","period":"1","subject":"영어","cls":"1-6"},{"teacher":"김정환","day":"화","period":"3","subject":"영어","cls":"1-4"},{"teacher":"김정환","day":"화","period":"5","subject":"영어","cls":"3-2"},{"teacher":"김정환","day":"화","period":"6","subject":"영어","cls":"1-1"},{"teacher":"김정환","day":"화","period":"7","subject":"영어","cls":"1-2"},{"teacher":"김정환","day":"수","period":"1","subject":"영어","cls":"3-6"},{"teacher":"김정환","day":"수","period":"3","subject":"주제선택활동","cls":"1-5"},{"teacher":"김정환","day":"수","period":"4","subject":"주제선택활동","cls":"1-5"},{"teacher":"김정환","day":"수","period":"5","subject":"영어","cls":"3-3"},{"teacher":"김정환","day":"목","period":"2","subject":"영어","cls":"1-1"},{"teacher":"김정환","day":"목","period":"4","subject":"영어","cls":"1-3"},{"teacher":"김정환","day":"목","period":"5","subject":"진로탐색활동","cls":"1-5"},{"teacher":"김정환","day":"목","period":"6","subject":"영어","cls":"1-5"},{"teacher":"김정환","day":"목","period":"7","subject":"영어","cls":"3-4"},{"teacher":"김정환","day":"금","period":"2","subject":"영어","cls":"1-2"},{"teacher":"김정환","day":"금","period":"4","subject":"영어","cls":"1-4"},{"teacher":"김정환","day":"금","period":"5","subject":"동아리활동","cls":"1-5"},{"teacher":"김정환","day":"금","period":"6","subject":"영어","cls":"1-6"},{"teacher":"김정환","day":"금","period":"7","subject":"영어","cls":"1-3"},{"teacher":"김찬희","day":"월","period":"2","subject":"과학","cls":"1-3"},{"teacher":"김찬희","day":"월","period":"3","subject":"과학","cls":"3-1"},{"teacher":"김찬희","day":"월","period":"4","subject":"과학","cls":"3-3"},{"teacher":"김찬희","day":"월","period":"6","subject":"과학","cls":"3-5"},{"teacher":"김찬희","day":"화","period":"1","subject":"과학","cls":"1-4"},{"teacher":"김찬희","day":"화","period":"2","subject":"과학","cls":"1-6"},{"teacher":"김찬희","day":"화","period":"4","subject":"과학","cls":"3-3"},{"teacher":"김찬희","day":"화","period":"5","subject":"과학","cls":"1-5"},{"teacher":"김찬희","day":"화","period":"6","subject":"과학","cls":"1-2"},{"teacher":"김찬희","day":"수","period":"1","subject":"과학","cls":"3-4"},{"teacher":"김찬희","day":"수","period":"2","subject":"과학","cls":"1-1"},{"teacher":"김찬희","day":"수","period":"3","subject":"과학","cls":"3-6"},{"teacher":"김찬희","day":"목","period":"1","subject":"과학","cls":"3-5"},{"teacher":"김찬희","day":"목","period":"2","subject":"과학","cls":"1-3"},{"teacher":"김찬희","day":"목","period":"5","subject":"과학","cls":"3-6"},{"teacher":"김찬희","day":"목","period":"6","subject":"과학","cls":"3-2"},{"teacher":"김찬희","day":"금","period":"2","subject":"과학","cls":"1-4"},{"teacher":"김찬희","day":"금","period":"4","subject":"과학","cls":"1-1"},{"teacher":"김찬희","day":"금","period":"6","subject":"과학","cls":"3-4"},{"teacher":"김찬희","day":"금","period":"7","subject":"과학","cls":"1-2"},{"teacher":"김현중","day":"월","period":"2","subject":"국어","cls":"2-4"},{"teacher":"김현중","day":"월","period":"3","subject":"국어","cls":"2-5"},{"teacher":"김현중","day":"월","period":"4","subject":"국어","cls":"2-3"},{"teacher":"김현중","day":"월","period":"7","subject":"국어","cls":"2-1"},{"teacher":"김현중","day":"화","period":"2","subject":"국어","cls":"2-5"},{"teacher":"김현중","day":"화","period":"3","subject":"국어","cls":"2-1"},{"teacher":"김현중","day":"화","period":"5","subject":"국어","cls":"2-2"},{"teacher":"김현중","day":"화","period":"6","subject":"국어","cls":"2-6"},{"teacher":"김현중","day":"수","period":"2","subject":"국어","cls":"2-3"},{"teacher":"김현중","day":"수","period":"4","subject":"국어","cls":"2-2"},{"teacher":"김현중","day":"수","period":"5","subject":"국어","cls":"2-6"},{"teacher":"김현중","day":"목","period":"1","subject":"국어","cls":"2-6"},{"teacher":"김현중","day":"목","period":"2","subject":"국어","cls":"2-4"},{"teacher":"김현중","day":"목","period":"5","subject":"국어","cls":"2-3"},{"teacher":"김현중","day":"목","period":"6","subject":"국어","cls":"2-1"},{"teacher":"김현중","day":"금","period":"1","subject":"국어","cls":"2-5"},{"teacher":"김현중","day":"금","period":"4","subject":"국어","cls":"2-2"},{"teacher":"김현중","day":"금","period":"5","subject":"국어","cls":"2-4"},{"teacher":"문연정","day":"월","period":"2","subject":"보건","cls":"1-6"},{"teacher":"문연정","day":"화","period":"7","subject":"보건","cls":"1-3"},{"teacher":"문연정","day":"수","period":"1","subject":"보건","cls":"1-2"},{"teacher":"문연정","day":"목","period":"4","subject":"보건","cls":"1-1"},{"teacher":"문연정","day":"금","period":"4","subject":"보건","cls":"1-5"},{"teacher":"문연정","day":"금","period":"7","subject":"보건","cls":"1-4"},{"teacher":"문주연","day":"월","period":"1","subject":"자율·자치활동","cls":"1-4"},{"teacher":"문주연","day":"월","period":"2","subject":"진로탐색활동","cls":"1-4"},{"teacher":"문주연","day":"월","period":"3","subject":"주제선택활동","cls":"1-4"},{"teacher":"문주연","day":"월","period":"4","subject":"주제선택활동","cls":"1-4"},{"teacher":"문주연","day":"월","period":"5","subject":"동아리활동","cls":"1-4"},{"teacher":"문주연","day":"월","period":"7","subject":"국어","cls":"1-6"},{"teacher":"문주연","day":"화","period":"1","subject":"국어","cls":"1-3"},{"teacher":"문주연","day":"화","period":"3","subject":"국어","cls":"1-2"},{"teacher":"문주연","day":"화","period":"5","subject":"국어","cls":"1-4"},{"teacher":"문주연","day":"화","period":"6","subject":"국어","cls":"1-6"},{"teacher":"문주연","day":"수","period":"1","subject":"국어","cls":"1-1"},{"teacher":"문주연","day":"수","period":"2","subject":"국어","cls":"1-4"},{"teacher":"문주연","day":"수","period":"3","subject":"주제선택활동","cls":"1-4"},{"teacher":"문주연","day":"수","period":"4","subject":"주제선택활동","cls":"1-4"},{"teacher":"문주연","day":"수","period":"5","subject":"국어","cls":"1-5"},{"teacher":"문주연","day":"목","period":"2","subject":"국어","cls":"1-2"},{"teacher":"문주연","day":"목","period":"4","subject":"국어","cls":"1-5"},{"teacher":"문주연","day":"목","period":"5","subject":"국어","cls":"1-4"},{"teacher":"문주연","day":"목","period":"7","subject":"진로탐색활동","cls":"1-4"},{"teacher":"문주연","day":"목","period":"7","subject":"국어","cls":"1-1"},{"teacher":"문주연","day":"금","period":"2","subject":"국어","cls":"1-6"},{"teacher":"문주연","day":"금","period":"3","subject":"국어","cls":"1-5"},{"teacher":"문주연","day":"금","period":"5","subject":"동아리활동","cls":"1-4"},{"teacher":"문주연","day":"금","period":"6","subject":"국어","cls":"1-3"},{"teacher":"박경혜","day":"월","period":"1","subject":"자율·자치활동","cls":"1-1"},{"teacher":"박경혜","day":"월","period":"3","subject":"주제선택활동","cls":"1-1"},{"teacher":"박경혜","day":"월","period":"4","subject":"주제선택활동","cls":"1-1"},{"teacher":"박경혜","day":"월","period":"5","subject":"동아리활동","cls":"1-1"},{"teacher":"박경혜","day":"월","period":"6","subject":"기술·가정","cls":"1-4"},{"teacher":"박경혜","day":"월","period":"7","subject":"기술·가정","cls":"1-2"},{"teacher":"박경혜","day":"화","period":"2","subject":"기술·가정","cls":"1-4"},{"teacher":"박경혜","day":"화","period":"3","subject":"기술·가정","cls":"1-3"},{"teacher":"박경혜","day":"화","period":"5","subject":"기술·가정","cls":"1-1"},{"teacher":"박경혜","day":"화","period":"6","subject":"기술·가정","cls":"1-5"},{"teacher":"박경혜","day":"수","period":"3","subject":"주제선택활동","cls":"1-1"},{"teacher":"박경혜","day":"수","period":"4","subject":"주제선택활동","cls":"1-1"},{"teacher":"박경혜","day":"수","period":"5","subject":"진로탐색활동","cls":"1-1"},{"teacher":"박경혜","day":"수","period":"5","subject":"기술·가정","cls":"1-6"},{"teacher":"박경혜","day":"목","period":"1","subject":"기술·가정","cls":"1-6"},{"teacher":"박경혜","day":"목","period":"3","subject":"기술·가정","cls":"1-5"},{"teacher":"박경혜","day":"목","period":"4","subject":"기술·가정","cls":"1-2"},{"teacher":"박경혜","day":"목","period":"5","subject":"진로탐색활동","cls":"1-1"},{"teacher":"박경혜","day":"목","period":"7","subject":"기술·가정","cls":"1-3"},{"teacher":"박경혜","day":"금","period":"1","subject":"기술·가정","cls":"3-3"},{"teacher":"박경혜","day":"금","period":"3","subject":"기술·가정","cls":"1-1"},{"teacher":"박경혜","day":"금","period":"4","subject":"기술·가정","cls":"3-1"},{"teacher":"박경혜","day":"금","period":"5","subject":"동아리활동","cls":"1-1"},{"teacher":"박경혜","day":"금","period":"6","subject":"기술·가정","cls":"3-2"},{"teacher":"유석훈","day":"월","period":"1","subject":"자율·자치활동","cls":"2-6"},{"teacher":"유석훈","day":"월","period":"6","subject":"동아리활동","cls":"2-6"},{"teacher":"유석훈","day":"월","period":"6","subject":"수학","cls":"1-6"},{"teacher":"유석훈","day":"월","period":"7","subject":"수학","cls":"2-6"},{"teacher":"유석훈","day":"화","period":"1","subject":"수학","cls":"2-3"},{"teacher":"유석훈","day":"화","period":"2","subject":"수학","cls":"2-6"},{"teacher":"유석훈","day":"화","period":"3","subject":"수학","cls":"2-5"},{"teacher":"유석훈","day":"화","period":"5","subject":"수학","cls":"2-4"},{"teacher":"유석훈","day":"화","period":"7","subject":"수학","cls":"1-5"},{"teacher":"유석훈","day":"수","period":"1","subject":"수학","cls":"1-4"},{"teacher":"유석훈","day":"수","period":"4","subject":"수학","cls":"2-3"},{"teacher":"유석훈","day":"목","period":"1","subject":"수학","cls":"1-4"},{"teacher":"유석훈","day":"목","period":"3","subject":"수학","cls":"2-5"},{"teacher":"유석훈","day":"목","period":"4","subject":"수학","cls":"2-4"},{"teacher":"유석훈","day":"목","period":"6","subject":"수학","cls":"1-6"},{"teacher":"유석훈","day":"금","period":"1","subject":"수학","cls":"1-5"},{"teacher":"유석훈","day":"금","period":"3","subject":"수학","cls":"2-6"},{"teacher":"유석훈","day":"금","period":"4","subject":"수학","cls":"2-4"},{"teacher":"유석훈","day":"금","period":"5","subject":"수학","cls":"2-3"},{"teacher":"유석훈","day":"금","period":"6","subject":"동아리활동","cls":"2-6"},{"teacher":"유석훈","day":"금","period":"7","subject":"수학","cls":"2-5"},{"teacher":"윤미연","day":"월","period":"2","subject":"국어","cls":"2-6"},{"teacher":"윤미연","day":"월","period":"4","subject":"국어","cls":"2-2"},{"teacher":"윤미연","day":"화","period":"4","subject":"국어","cls":"2-4"},{"teacher":"윤미연","day":"화","period":"6","subject":"국어","cls":"2-3"},{"teacher":"윤미연","day":"수","period":"2","subject":"국어","cls":"2-1"},{"teacher":"윤미연","day":"수","period":"3","subject":"국어","cls":"2-4"},{"teacher":"윤미연","day":"수","period":"5","subject":"국어","cls":"2-5"},{"teacher":"윤미연","day":"목","period":"2","subject":"국어","cls":"2-1"},{"teacher":"윤미연","day":"목","period":"4","subject":"국어","cls":"2-5"},{"teacher":"윤미연","day":"목","period":"7","subject":"국어","cls":"2-2"},{"teacher":"윤미연","day":"금","period":"3","subject":"국어","cls":"2-3"},{"teacher":"윤미연","day":"금","period":"4","subject":"국어","cls":"2-6"},{"teacher":"윤영태","day":"월","period":"1","subject":"자율활동","cls":"3-1"},{"teacher":"윤영태","day":"월","period":"3","subject":"도덕","cls":"2-3"},{"teacher":"윤영태","day":"월","period":"4","subject":"도덕","cls":"2-6"},{"teacher":"윤영태","day":"월","period":"6","subject":"도덕","cls":"1-3"},{"teacher":"윤영태","day":"월","period":"7","subject":"동아리활동","cls":"3-1"},{"teacher":"윤영태","day":"화","period":"2","subject":"도덕","cls":"1-1"},{"teacher":"윤영태","day":"화","period":"3","subject":"도덕","cls":"2-4"},{"teacher":"윤영태","day":"화","period":"4","subject":"도덕","cls":"1-5"},{"teacher":"윤영태","day":"화","period":"7","subject":"도덕","cls":"2-5"},{"teacher":"윤영태","day":"수","period":"2","subject":"도덕","cls":"1-6"},{"teacher":"윤영태","day":"수","period":"4","subject":"도덕","cls":"2-1"},{"teacher":"윤영태","day":"수","period":"5","subject":"도덕","cls":"1-4"},{"teacher":"윤영태","day":"목","period":"1","subject":"도덕","cls":"1-1"},{"teacher":"윤영태","day":"목","period":"2","subject":"도덕","cls":"1-5"},{"teacher":"윤영태","day":"목","period":"3","subject":"도덕","cls":"1-4"},{"teacher":"윤영태","day":"목","period":"5","subject":"도덕","cls":"1-6"},{"teacher":"윤영태","day":"목","period":"6","subject":"도덕","cls":"1-2"},{"teacher":"윤영태","day":"금","period":"2","subject":"도덕","cls":"1-3"},{"teacher":"윤영태","day":"금","period":"3","subject":"도덕","cls":"1-2"},{"teacher":"윤영태","day":"금","period":"5","subject":"도덕","cls":"2-2"},{"teacher":"윤영태","day":"금","period":"7","subject":"동아리활동","cls":"3-1"},{"teacher":"이밝음","day":"월","period":"1","subject":"자율활동","cls":"3-3"},{"teacher":"이밝음","day":"월","period":"2","subject":"영어","cls":"3-4"},{"teacher":"이밝음","day":"월","period":"3","subject":"영어","cls":"3-3"},{"teacher":"이밝음","day":"월","period":"5","subject":"영어","cls":"3-2"},{"teacher":"이밝음","day":"월","period":"7","subject":"동아리활동","cls":"3-3"},{"teacher":"이밝음","day":"화","period":"1","subject":"영어","cls":"3-3"},{"teacher":"이밝음","day":"화","period":"3","subject":"영어","cls":"3-6"},{"teacher":"이밝음","day":"화","period":"4","subject":"영어","cls":"3-4"},{"teacher":"이밝음","day":"화","period":"5","subject":"영어","cls":"3-1"},{"teacher":"이밝음","day":"수","period":"1","subject":"영어","cls":"3-1"},{"teacher":"이밝음","day":"수","period":"5","subject":"영어","cls":"3-5"},{"teacher":"이밝음","day":"목","period":"2","subject":"영어","cls":"3-1"},{"teacher":"이밝음","day":"목","period":"3","subject":"영어","cls":"3-6"},{"teacher":"이밝음","day":"목","period":"4","subject":"영어","cls":"3-3"},{"teacher":"이밝음","day":"목","period":"6","subject":"영어","cls":"3-5"},{"teacher":"이밝음","day":"목","period":"7","subject":"영어","cls":"3-2"},{"teacher":"이밝음","day":"금","period":"2","subject":"영어","cls":"3-2"},{"teacher":"이밝음","day":"금","period":"3","subject":"영어","cls":"3-5"},{"teacher":"이밝음","day":"금","period":"4","subject":"영어","cls":"3-4"},{"teacher":"이밝음","day":"금","period":"6","subject":"영어","cls":"3-6"},{"teacher":"이밝음","day":"금","period":"7","subject":"동아리활동","cls":"3-3"},{"teacher":"이원준","day":"월","period":"1","subject":"자율활동","cls":"3-5"},{"teacher":"이원준","day":"월","period":"2","subject":"한문","cls":"3-5"},{"teacher":"이원준","day":"월","period":"4","subject":"한문","cls":"3-2"},{"teacher":"이원준","day":"월","period":"5","subject":"한문","cls":"2-5"},{"teacher":"이원준","day":"월","period":"7","subject":"동아리활동","cls":"3-5"},{"teacher":"이원준","day":"화","period":"1","subject":"한문","cls":"2-4"},{"teacher":"이원준","day":"화","period":"2","subject":"한문","cls":"2-2"},{"teacher":"이원준","day":"화","period":"4","subject":"한문","cls":"2-6"},{"teacher":"이원준","day":"화","period":"5","subject":"한문","cls":"2-1"},{"teacher":"이원준","day":"화","period":"7","subject":"한문","cls":"3-4"},{"teacher":"이원준","day":"수","period":"1","subject":"한문","cls":"2-3"},{"teacher":"이원준","day":"수","period":"3","subject":"한문","cls":"2-6"},{"teacher":"이원준","day":"수","period":"5","subject":"한문","cls":"2-4"},{"teacher":"이원준","day":"목","period":"1","subject":"한문","cls":"3-6"},{"teacher":"이원준","day":"목","period":"3","subject":"한문","cls":"2-2"},{"teacher":"이원준","day":"목","period":"5","subject":"한문","cls":"3-1"},{"teacher":"이원준","day":"목","period":"6","subject":"한문","cls":"3-3"},{"teacher":"이원준","day":"금","period":"1","subject":"한문","cls":"2-1"},{"teacher":"이원준","day":"금","period":"3","subject":"한문","cls":"2-5"},{"teacher":"이원준","day":"금","period":"4","subject":"한문","cls":"2-3"},{"teacher":"이원준","day":"금","period":"7","subject":"동아리활동","cls":"3-5"},{"teacher":"이재현","day":"월","period":"1","subject":"자율·자치활동","cls":"2-1"},{"teacher":"이재현","day":"월","period":"3","subject":"과학","cls":"2-2"},{"teacher":"이재현","day":"월","period":"5","subject":"과학","cls":"2-4"},{"teacher":"이재현","day":"월","period":"6","subject":"동아리활동","cls":"2-1"},{"teacher":"이재현","day":"월","period":"7","subject":"과학","cls":"2-5"},{"teacher":"이재현","day":"화","period":"1","subject":"과학","cls":"2-1"},{"teacher":"이재현","day":"화","period":"3","subject":"과학","cls":"2-6"},{"teacher":"이재현","day":"화","period":"4","subject":"과학","cls":"2-3"},{"teacher":"이재현","day":"화","period":"7","subject":"과학","cls":"2-4"},{"teacher":"이재현","day":"수","period":"2","subject":"과학","cls":"2-6"},{"teacher":"이재현","day":"수","period":"3","subject":"과학","cls":"2-1"},{"teacher":"이재현","day":"수","period":"5","subject":"과학","cls":"2-2"},{"teacher":"이재현","day":"목","period":"1","subject":"과학","cls":"2-5"},{"teacher":"이재현","day":"목","period":"2","subject":"과학","cls":"2-3"},{"teacher":"이재현","day":"목","period":"4","subject":"과학","cls":"1-6"},{"teacher":"이재현","day":"목","period":"5","subject":"과학","cls":"2-1"},{"teacher":"이재현","day":"목","period":"7","subject":"과학","cls":"1-5"},{"teacher":"이재현","day":"금","period":"1","subject":"과학","cls":"2-4"},{"teacher":"이재현","day":"금","period":"2","subject":"과학","cls":"2-5"},{"teacher":"이재현","day":"금","period":"3","subject":"과학","cls":"2-2"},{"teacher":"이재현","day":"금","period":"5","subject":"과학","cls":"2-6"},{"teacher":"이재현","day":"금","period":"6","subject":"동아리활동","cls":"2-1"},{"teacher":"이재현","day":"금","period":"7","subject":"과학","cls":"2-3"},{"teacher":"이학룡","day":"월","period":"2","subject":"체육","cls":"2-5"},{"teacher":"이학룡","day":"월","period":"3","subject":"체육","cls":"2-4"},{"teacher":"이학룡","day":"화","period":"1","subject":"체육","cls":"2-5"},{"teacher":"이학룡","day":"화","period":"2","subject":"체육","cls":"2-3"},{"teacher":"이학룡","day":"화","period":"4","subject":"체육","cls":"2-2"},{"teacher":"이학룡","day":"화","period":"5","subject":"체육","cls":"2-6"},{"teacher":"이학룡","day":"수","period":"2","subject":"체육","cls":"2-2"},{"teacher":"이학룡","day":"수","period":"3","subject":"체육","cls":"2-3"},{"teacher":"이학룡","day":"수","period":"5","subject":"체육","cls":"2-1"},{"teacher":"이학룡","day":"목","period":"1","subject":"체육","cls":"2-4"},{"teacher":"이학룡","day":"목","period":"3","subject":"체육","cls":"2-6"},{"teacher":"이학룡","day":"목","period":"4","subject":"체육","cls":"2-1"},{"teacher":"이학룡","day":"목","period":"6","subject":"체육","cls":"2-5"},{"teacher":"이학룡","day":"목","period":"7","subject":"체육","cls":"2-3"},{"teacher":"이학룡","day":"금","period":"1","subject":"체육","cls":"2-6"},{"teacher":"이학룡","day":"금","period":"2","subject":"체육","cls":"2-2"},{"teacher":"이학룡","day":"금","period":"4","subject":"체육","cls":"2-1"},{"teacher":"이학룡","day":"금","period":"7","subject":"체육","cls":"2-4"},{"teacher":"임주은","day":"월","period":"1","subject":"자율·자치활동","cls":"2-4"},{"teacher":"임주은","day":"월","period":"3","subject":"사회","cls":"3-6"},{"teacher":"임주은","day":"월","period":"4","subject":"도덕","cls":"2-4"},{"teacher":"임주은","day":"월","period":"6","subject":"동아리활동","cls":"2-4"},{"teacher":"임주은","day":"화","period":"1","subject":"사회","cls":"3-4"},{"teacher":"임주은","day":"화","period":"2","subject":"사회","cls":"3-6"},{"teacher":"임주은","day":"화","period":"4","subject":"사회","cls":"3-2"},{"teacher":"임주은","day":"화","period":"6","subject":"사회","cls":"3-5"},{"teacher":"임주은","day":"화","period":"7","subject":"도덕","cls":"2-3"},{"teacher":"임주은","day":"수","period":"2","subject":"사회","cls":"3-5"},{"teacher":"임주은","day":"수","period":"3","subject":"사회","cls":"3-1"},{"teacher":"임주은","day":"수","period":"4","subject":"사회","cls":"3-3"},{"teacher":"임주은","day":"목","period":"3","subject":"도덕","cls":"2-1"},{"teacher":"임주은","day":"목","period":"4","subject":"사회","cls":"3-4"},{"teacher":"임주은","day":"목","period":"5","subject":"도덕","cls":"2-2"},{"teacher":"임주은","day":"목","period":"7","subject":"사회","cls":"3-3"},{"teacher":"임주은","day":"금","period":"1","subject":"사회","cls":"3-2"},{"teacher":"임주은","day":"금","period":"2","subject":"도덕","cls":"2-6"},{"teacher":"임주은","day":"금","period":"3","subject":"사회","cls":"3-1"},{"teacher":"임주은","day":"금","period":"5","subject":"도덕","cls":"2-5"},{"teacher":"임주은","day":"금","period":"6","subject":"동아리활동","cls":"2-4"},{"teacher":"장효영","day":"화","period":"1","subject":"기술·가정","cls":"3-1"},{"teacher":"장효영","day":"화","period":"2","subject":"기술·가정","cls":"3-4"},{"teacher":"장효영","day":"화","period":"4","subject":"기술·가정","cls":"3-6"},{"teacher":"장효영","day":"화","period":"5","subject":"기술·가정","cls":"3-5"},{"teacher":"장효영","day":"화","period":"6","subject":"기술·가정","cls":"3-3"},{"teacher":"장효영","day":"수","period":"2","subject":"기술·가정","cls":"3-6"},{"teacher":"장효영","day":"수","period":"3","subject":"기술·가정","cls":"3-2"},{"teacher":"장효영","day":"수","period":"4","subject":"기술·가정","cls":"3-4"},{"teacher":"장효영","day":"목","period":"1","subject":"기술·가정","cls":"3-1"},{"teacher":"장효영","day":"목","period":"2","subject":"기술·가정","cls":"3-5"},{"teacher":"장효영","day":"목","period":"3","subject":"기술·가정","cls":"3-3"},{"teacher":"장효영","day":"목","period":"5","subject":"기술·가정","cls":"3-2"},{"teacher":"장효영","day":"목","period":"6","subject":"기술·가정","cls":"3-6"},{"teacher":"장효영","day":"금","period":"1","subject":"기술·가정","cls":"3-5"},{"teacher":"장효영","day":"금","period":"3","subject":"기술·가정","cls":"3-4"},{"teacher":"정인수","day":"월","period":"1","subject":"자율·자치활동","cls":"2-3"},{"teacher":"정인수","day":"월","period":"2","subject":"과학","cls":"3-2"},{"teacher":"정인수","day":"월","period":"4","subject":"과학","cls":"3-6"},{"teacher":"정인수","day":"월","period":"5","subject":"과학","cls":"3-4"},{"teacher":"정인수","day":"월","period":"6","subject":"동아리활동","cls":"2-3"},{"teacher":"정인수","day":"월","period":"7","subject":"과학","cls":"2-3"},{"teacher":"정인수","day":"화","period":"3","subject":"과학","cls":"2-2"},{"teacher":"정인수","day":"화","period":"5","subject":"과학","cls":"3-6"},{"teacher":"정인수","day":"화","period":"6","subject":"과학","cls":"3-2"},{"teacher":"정인수","day":"화","period":"7","subject":"과학","cls":"3-1"},{"teacher":"정인수","day":"수","period":"1","subject":"과학","cls":"3-5"},{"teacher":"정인수","day":"수","period":"3","subject":"과학","cls":"2-5"},{"teacher":"정인수","day":"수","period":"4","subject":"과학","cls":"3-1"},{"teacher":"정인수","day":"목","period":"1","subject":"과학","cls":"3-3"},{"teacher":"정인수","day":"목","period":"2","subject":"과학","cls":"3-4"},{"teacher":"정인수","day":"목","period":"4","subject":"과학","cls":"3-1"},{"teacher":"정인수","day":"목","period":"5","subject":"과학","cls":"2-4"},{"teacher":"정인수","day":"목","period":"6","subject":"과학","cls":"2-6"},{"teacher":"정인수","day":"금","period":"2","subject":"과학","cls":"3-5"},{"teacher":"정인수","day":"금","period":"3","subject":"과학","cls":"3-2"},{"teacher":"정인수","day":"금","period":"5","subject":"과학","cls":"2-1"},{"teacher":"정인수","day":"금","period":"6","subject":"과학","cls":"3-3"},{"teacher":"정인수","day":"금","period":"6","subject":"동아리활동","cls":"2-3"},{"teacher":"정현호","day":"월","period":"1","subject":"자율활동","cls":"3-4"},{"teacher":"정현호","day":"월","period":"3","subject":"체육","cls":"3-5"},{"teacher":"정현호","day":"월","period":"4","subject":"체육","cls":"3-4"},{"teacher":"정현호","day":"월","period":"7","subject":"동아리활동","cls":"3-4"},{"teacher":"정현호","day":"화","period":"1","subject":"체육","cls":"3-6"},{"teacher":"정현호","day":"화","period":"2","subject":"체육","cls":"3-5"},{"teacher":"정현호","day":"화","period":"3","subject":"체육","cls":"3-2"},{"teacher":"정현호","day":"화","period":"5","subject":"체육","cls":"3-3"},{"teacher":"정현호","day":"화","period":"6","subject":"체육","cls":"3-1"},{"teacher":"정현호","day":"수","period":"1","subject":"체육","cls":"3-3"},{"teacher":"정현호","day":"수","period":"3","subject":"체육","cls":"3-4"},{"teacher":"정현호","day":"수","period":"4","subject":"체육","cls":"3-2"},{"teacher":"정현호","day":"목","period":"2","subject":"체육","cls":"3-6"},{"teacher":"정현호","day":"목","period":"3","subject":"체육","cls":"3-1"},{"teacher":"정현호","day":"목","period":"5","subject":"체육","cls":"3-4"},{"teacher":"정현호","day":"목","period":"7","subject":"체육","cls":"3-5"},{"teacher":"정현호","day":"금","period":"1","subject":"체육","cls":"3-1"},{"teacher":"정현호","day":"금","period":"2","subject":"체육","cls":"3-3"},{"teacher":"정현호","day":"금","period":"4","subject":"체육","cls":"3-2"},{"teacher":"정현호","day":"금","period":"5","subject":"체육","cls":"3-6"},{"teacher":"정현호","day":"금","period":"7","subject":"동아리활동","cls":"3-4"},{"teacher":"최유진","day":"월","period":"2","subject":"영어","cls":"2-3"},{"teacher":"최유진","day":"월","period":"3","subject":"영어","cls":"2-1"},{"teacher":"최유진","day":"월","period":"4","subject":"영어","cls":"2-5"},{"teacher":"최유진","day":"월","period":"7","subject":"영어","cls":"2-2"},{"teacher":"최유진","day":"화","period":"1","subject":"영어","cls":"2-6"},{"teacher":"최유진","day":"화","period":"2","subject":"영어","cls":"2-4"},{"teacher":"최유진","day":"화","period":"5","subject":"영어","cls":"2-3"},{"teacher":"최유진","day":"화","period":"6","subject":"영어","cls":"2-2"},{"teacher":"최유진","day":"화","period":"7","subject":"영어","cls":"2-1"},{"teacher":"최유진","day":"수","period":"1","subject":"영어","cls":"2-5"},{"teacher":"최유진","day":"목","period":"1","subject":"영어","cls":"2-1"},{"teacher":"최유진","day":"목","period":"2","subject":"영어","cls":"2-6"},{"teacher":"최유진","day":"목","period":"3","subject":"영어","cls":"2-3"},{"teacher":"최유진","day":"목","period":"5","subject":"영어","cls":"2-5"},{"teacher":"최유진","day":"목","period":"6","subject":"영어","cls":"2-4"},{"teacher":"최유진","day":"금","period":"1","subject":"영어","cls":"2-2"},{"teacher":"최유진","day":"금","period":"3","subject":"영어","cls":"2-4"},{"teacher":"최유진","day":"금","period":"7","subject":"영어","cls":"2-6"},{"teacher":"한진영","day":"월","period":"1","subject":"자율·자치활동","cls":"1-6"},{"teacher":"한진영","day":"월","period":"2","subject":"체육","cls":"1-2"},{"teacher":"한진영","day":"월","period":"3","subject":"주제선택활동","cls":"1-6"},{"teacher":"한진영","day":"월","period":"4","subject":"주제선택활동","cls":"1-6"},{"teacher":"한진영","day":"월","period":"5","subject":"동아리활동","cls":"1-6"},{"teacher":"한진영","day":"화","period":"1","subject":"체육","cls":"1-2"},{"teacher":"한진영","day":"화","period":"3","subject":"체육","cls":"1-5"},{"teacher":"한진영","day":"화","period":"4","subject":"체육","cls":"1-1"},{"teacher":"한진영","day":"화","period":"4","subject":"진로탐색활동","cls":"1-6"},{"teacher":"한진영","day":"화","period":"6","subject":"체육","cls":"1-4"},{"teacher":"한진영","day":"화","period":"7","subject":"체육","cls":"1-6"},{"teacher":"한진영","day":"수","period":"1","subject":"체육","cls":"1-6"},{"teacher":"한진영","day":"수","period":"2","subject":"체육","cls":"1-5"},{"teacher":"한진영","day":"수","period":"3","subject":"주제선택활동","cls":"1-6"},{"teacher":"한진영","day":"수","period":"4","subject":"주제선택활동","cls":"1-6"},{"teacher":"한진영","day":"수","period":"5","subject":"체육","cls":"1-3"},{"teacher":"한진영","day":"목","period":"1","subject":"체육","cls":"1-3"},{"teacher":"한진영","day":"목","period":"3","subject":"체육","cls":"1-1"},{"teacher":"한진영","day":"목","period":"3","subject":"진로탐색활동","cls":"1-6"},{"teacher":"한진영","day":"목","period":"4","subject":"체육","cls":"1-4"},{"teacher":"한진영","day":"목","period":"5","subject":"체육","cls":"1-2"},{"teacher":"한진영","day":"목","period":"7","subject":"체육","cls":"1-6"},{"teacher":"한진영","day":"금","period":"1","subject":"체육","cls":"1-4"},{"teacher":"한진영","day":"금","period":"2","subject":"체육","cls":"1-1"},{"teacher":"한진영","day":"금","period":"3","subject":"체육","cls":"1-3"},{"teacher":"한진영","day":"금","period":"5","subject":"동아리활동","cls":"1-6"},{"teacher":"한진영","day":"금","period":"7","subject":"체육","cls":"1-5"},{"teacher":"허용석","day":"월","period":"2","subject":"수학","cls":"2-1"},{"teacher":"허용석","day":"월","period":"3","subject":"수학","cls":"3-2"},{"teacher":"허용석","day":"월","period":"5","subject":"수학","cls":"3-1"},{"teacher":"허용석","day":"월","period":"6","subject":"수학","cls":"3-3"},{"teacher":"허용석","day":"화","period":"2","subject":"수학","cls":"3-3"},{"teacher":"허용석","day":"화","period":"3","subject":"수학","cls":"3-1"},{"teacher":"허용석","day":"화","period":"6","subject":"수학","cls":"2-1"},{"teacher":"허용석","day":"화","period":"7","subject":"수학","cls":"2-2"},{"teacher":"허용석","day":"수","period":"1","subject":"수학","cls":"2-2"},{"teacher":"허용석","day":"수","period":"5","subject":"수학","cls":"3-2"},{"teacher":"허용석","day":"목","period":"1","subject":"수학","cls":"3-2"},{"teacher":"허용석","day":"목","period":"4","subject":"수학","cls":"2-2"},{"teacher":"허용석","day":"목","period":"5","subject":"수학","cls":"3-3"},{"teacher":"허용석","day":"목","period":"7","subject":"수학","cls":"3-1"},{"teacher":"허용석","day":"금","period":"2","subject":"수학","cls":"2-1"},{"teacher":"허용석","day":"금","period":"4","subject":"수학","cls":"3-3"},{"teacher":"허용석","day":"금","period":"5","subject":"수학","cls":"3-2"},{"teacher":"허용석","day":"금","period":"6","subject":"수학","cls":"3-1"},{"teacher":"허화경","day":"월","period":"5","subject":"진로와 직업","cls":"2-1"},{"teacher":"허화경","day":"월","period":"6","subject":"진로와 직업","cls":"1-1"},{"teacher":"허화경","day":"화","period":"1","subject":"진로와 직업","cls":"2-2"},{"teacher":"허화경","day":"화","period":"2","subject":"진로와 직업","cls":"1-5"},{"teacher":"허화경","day":"화","period":"5","subject":"진로와 직업","cls":"1-2"},{"teacher":"허화경","day":"수","period":"2","subject":"진로와 직업","cls":"2-4"},{"teacher":"허화경","day":"수","period":"4","subject":"진로와 직업","cls":"2-6"},{"teacher":"허화경","day":"목","period":"4","subject":"진로와 직업","cls":"2-3"},{"teacher":"허화경","day":"목","period":"6","subject":"진로와 직업","cls":"1-3"},{"teacher":"허화경","day":"금","period":"1","subject":"진로와 직업","cls":"1-6"},{"teacher":"허화경","day":"금","period":"4","subject":"진로와 직업","cls":"2-5"},{"teacher":"허화경","day":"금","period":"6","subject":"진로와 직업","cls":"1-4"}]</script>
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.min.css');
+
+  :root{
+    --navy:#0b3d6e;
+    --navy-dark:#062a4d;
+    --sky:#eaf2fb;
+    --ink:#222325;
+    --sub:#5b6570;
+    --line:#dbe0e5;
+    --line-strong:#c3cad1;
+    --accent:#0b4ea2;
+    --accent-soft:#e3edfa;
+    --warn:#b3400f;
+    --warn-soft:#fbebe0;
+    --bg:#f2f4f6;
+    --mono: "Pretendard", monospace;
+    --sans: "Pretendard", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--sans); font-size:14px; line-height:1.6;
+  }
+
+  header{
+    background:var(--navy); color:#fff;
+    padding:0;
+    border-bottom:4px solid var(--navy-dark);
+  }
+  header .bar{
+    max-width:1180px; margin:0 auto; padding:22px 32px 18px;
+    display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:8px;
+  }
+  header h1{
+    font-size:22px; font-weight:700; margin:0; letter-spacing:-0.01em; color:#fff;
+    display:flex; align-items:center; gap:10px;
+  }
+  header h1 .mark{
+    width:8px; height:22px; background:#fff; display:inline-block;
+  }
+  header .sub{ font-size:12px; color:#bcd2e8; letter-spacing:0; }
+
+  main{ max-width:1180px; margin:0 auto; padding:28px 32px 64px; }
+
+  .panel{
+    background:#fff; border:1px solid var(--line); border-radius:2px;
+    padding:0 0 20px; margin-bottom:22px;
+  }
+  .panel h2{
+    font-size:15px; font-weight:700; margin:0; color:var(--ink);
+    padding:14px 20px; background:var(--sky); border-bottom:2px solid var(--navy);
+    display:flex; align-items:center; gap:8px;
+  }
+  .panel > *:not(h2){ margin-left:20px; margin-right:20px; }
+  .panel h2 + *{ margin-top:18px; }
+
+  #dropzone{
+    border:1px dashed var(--line-strong); border-radius:2px; padding:30px; text-align:center;
+    cursor:pointer; transition:border-color .15s, background .15s; background:#fafbfc;
+  }
+  #dropzone:hover, #dropzone.drag{ border-color:var(--accent); background:var(--accent-soft); }
+  #dropzone .hint{ font-size:12px; color:var(--sub); margin-top:8px; }
+  #fileInput{ display:none; }
+
+  table{ width:100%; border-collapse:collapse; font-size:13px; }
+  th, td{ border:1px solid var(--line); padding:8px 10px; text-align:left; }
+  th{ background:var(--sky); color:var(--navy-dark); font-weight:700; font-size:12.5px; }
+  tbody tr:nth-child(even) td{ background:#f8fafb; }
+  td.empty{ color:#9aa3ab; font-style:italic; }
+  tr.clickable{ cursor:pointer; }
+  tr.clickable:hover td{ background:var(--accent-soft); }
+  tr.selected td{ background:var(--warn-soft); }
+  tr.selected td:first-child{ box-shadow:inset 3px 0 0 var(--warn); }
+
+  .chip{
+    display:inline-block; font-size:12px; font-weight:600;
+    padding:2px 8px; border-radius:2px; background:#fff; border:1px solid var(--accent);
+    color:var(--accent); white-space:nowrap;
+  }
+
+  .grid-wrap{ overflow-x:auto; }
+
+  select, button{
+    font-family:var(--sans); font-size:13px; padding:8px 14px;
+    border:1px solid var(--line-strong); border-radius:2px; background:#fff; color:var(--ink);
+  }
+  button{ background:var(--navy); color:#fff; cursor:pointer; font-weight:600; border-color:var(--navy); }
+  button:hover{ background:var(--navy-dark); }
+  button:disabled{ background:#b7bec4; border-color:#b7bec4; cursor:not-allowed; }
+
+  .filters{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:16px; }
+  .filters label{
+    font-size:12px; font-weight:600; color:var(--sub); display:flex; flex-direction:column; gap:5px;
+  }
+
+  .result-block{ margin-top:14px; }
+  .tag{
+    display:inline-block; font-size:12px; font-weight:700; padding:3px 9px;
+    border-radius:2px; margin-right:6px;
+  }
+  .tag.ok{ background:var(--accent-soft); color:var(--accent); border:1px solid var(--accent); }
+  .tag.warn{ background:var(--warn-soft); color:var(--warn); border:1px solid var(--warn); }
+
+  .placeholder{
+    color:var(--sub); font-size:13px; padding:14px 16px; background:#fafbfc;
+    border:1px solid var(--line); border-left:3px solid var(--line-strong); border-radius:2px;
+  }
+
+  .summary-line{
+    font-size:13px; color:var(--ink); margin-bottom:12px; padding:12px 14px;
+    background:var(--sky); border-left:3px solid var(--navy); border-radius:2px;
+  }
+  .badge-count{
+    background:var(--navy); color:#fff; border-radius:9px;
+    padding:1px 8px; font-size:11px; margin-left:6px; font-weight:700;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <h1><span class="mark"></span>대체수업 · 보강 관리</h1>
+    <div class="sub" id="modeSub">엑셀 업로드 → 결강 수업 선택 → 교체/보강 후보 계산 (브라우저 내 처리, 서버 전송 없음)</div>
+  </div>
+</header>
+
+<main>
+
+  <div class="panel" id="uploadPanel">
+    <h2>① 시간표 업로드 (관리자용)</h2>
+    <div id="dropzone">
+      <div>엑셀 파일을 여기로 드래그하거나 클릭하여 선택</div>
+      <div class="hint">지원 형식: ① NEIS "학기별 전체 교사 시간표" 원본  ② 교사·요일·교시·과목·반 리스트형</div>
+      <input type="file" id="fileInput" accept=".xlsx,.xls,.csv">
+    </div>
+    <div id="uploadStatus" class="summary-line"></div>
+    <div id="distributeArea" style="display:none; margin-top:10px;">
+      <button id="distributeBtn">배포용 파일 만들기 (일반 교사용, 업로드 화면 없이 바로 사용)</button>
+      <div class="hint" style="margin-top:6px;">생성된 파일을 학교 공유 경로/메신저로 배포하면, 여는 사람은 업로드 없이 바로 02번부터 사용합니다.</div>
+    </div>
+  </div>
+
+  <div class="panel" id="selectPanel" style="display:none;">
+    <h2>② 결강 수업 선택</h2>
+    <div class="filters">
+      <label>교사
+        <select id="teacherFilter"></select>
+      </label>
+      <label>요일
+        <select id="dayFilter"></select>
+      </label>
+    </div>
+    <div class="grid-wrap">
+      <table id="scheduleTable"></table>
+    </div>
+  </div>
+
+  <div class="panel" id="resultPanel" style="display:none;">
+    <h2>③ 교체 · 보강 후보</h2>
+    <div id="resultBody"></div>
+  </div>
+
+</main>
+
+<script>
+// 배포 파일 생성을 위해 페이지 로드 시점의 원본 HTML을 캡처해둔다 (아직 어떤 조작도 가하기 전)
+const ORIGINAL_HTML = document.documentElement.outerHTML;
+
+const DAY_ORDER = ['월','화','수','목','금','토','일'];
+let rows = []; // {teacher, day, period, subject, cls}
+let selected = null; // {teacher, day, period, subject, cls}
+
+const dropzone = document.getElementById('dropzone');
+const fileInput = document.getElementById('fileInput');
+const uploadStatus = document.getElementById('uploadStatus');
+const selectPanel = document.getElementById('selectPanel');
+const resultPanel = document.getElementById('resultPanel');
+const teacherFilter = document.getElementById('teacherFilter');
+const dayFilter = document.getElementById('dayFilter');
+const scheduleTable = document.getElementById('scheduleTable');
+const resultBody = document.getElementById('resultBody');
+const distributeArea = document.getElementById('distributeArea');
+const distributeBtn = document.getElementById('distributeBtn');
+const modeSub = document.getElementById('modeSub');
+const uploadPanel = document.getElementById('uploadPanel');
+
+dropzone.addEventListener('click', () => fileInput.click());
+dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('drag'); });
+dropzone.addEventListener('dragleave', () => dropzone.classList.remove('drag'));
+dropzone.addEventListener('drop', e => {
+  e.preventDefault(); dropzone.classList.remove('drag');
+  if(e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
+});
+fileInput.addEventListener('change', e => {
+  if(e.target.files.length) handleFile(e.target.files[0]);
+});
+
+function normalizeHeader(h){
+  const s = String(h).trim();
+  if(/교사|이름|성명/.test(s)) return 'teacher';
+  if(/요일/.test(s)) return 'day';
+  if(/교시|시간/.test(s)) return 'period';
+  if(/과목|교과/.test(s)) return 'subject';
+  if(/반|학급/.test(s)) return 'cls';
+  return s;
+}
+
+const DAY_CHARS = ['월','화','수','목','금','토','일'];
+
+// ① 리스트형 파싱: 첫 행이 교사/요일/교시 등 헤더인 경우
+function parseSimpleList(sheet){
+  const json = XLSX.utils.sheet_to_json(sheet, {defval:''});
+  if(!json.length) return null;
+  const headerKeys = Object.keys(json[0]).map(normalizeHeader);
+  if(!headerKeys.includes('teacher') || !headerKeys.includes('day') || !headerKeys.includes('period')) return null;
+
+  const keyMap = {};
+  Object.keys(json[0]).forEach(orig => { keyMap[orig] = normalizeHeader(orig); });
+
+  const out = json.map(r => {
+    const o = {};
+    Object.keys(r).forEach(k => { o[keyMap[k]] = String(r[k]).trim(); });
+    o.period = String(o.period).replace(/[^0-9]/g,'');
+    return o;
+  }).filter(o => o.teacher && o.day && o.period);
+
+  return out.length ? out : null;
+}
+
+// ② NEIS "학기별 전체 교사 시간표" 원본 파싱
+// 구조: 헤더행(요일 라벨 + 순번/교사 성명), 다음 행(교시 번호), 이후 교사별 행
+function parseNeisWide(sheet){
+  const aoa = XLSX.utils.sheet_to_json(sheet, {header:1, defval:null, raw:true});
+
+  let headerRowIdx = -1;
+  for(let i=0;i<Math.min(aoa.length,15);i++){
+    const row = aoa[i] || [];
+    const hasTeacherLabel = row.some(c => c && /교사/.test(String(c)));
+    const hasDayLabel = row.some(c => c && DAY_CHARS.includes(String(c).trim()));
+    if(hasTeacherLabel && hasDayLabel){ headerRowIdx = i; break; }
+  }
+  if(headerRowIdx === -1) return null;
+
+  const headerRow = aoa[headerRowIdx];
+  const periodRow = aoa[headerRowIdx+1] || [];
+
+  // 교사 이름 열: 헤더행에서 '교사' 라벨이 있는 열
+  let teacherColIdx = headerRow.findIndex(c => c && /교사/.test(String(c)));
+  if(teacherColIdx === -1) return null;
+
+  // 요일/교시 컬럼 매핑 (교사 열 다음 칸부터)
+  const colMeta = {};
+  let curDay = null;
+  for(let i=teacherColIdx+1; i<headerRow.length; i++){
+    const v = headerRow[i];
+    if(v && DAY_CHARS.includes(String(v).trim())) curDay = String(v).trim();
+    const p = periodRow[i];
+    if(curDay && typeof p === 'number' && Number.isFinite(p)){
+      colMeta[i] = {day: curDay, period: String(p)};
+    }
+  }
+  if(!Object.keys(colMeta).length) return null;
+
+  const out = [];
+  for(let r=headerRowIdx+2; r<aoa.length; r++){
+    const row = aoa[r] || [];
+    const rawName = row[teacherColIdx];
+    if(!rawName || !String(rawName).trim()) continue;
+    const m = String(rawName).trim().match(/\(([^)]+)\)\s*$/);
+    const teacher = m ? m[1] : String(rawName).trim();
+
+    Object.keys(colMeta).forEach(colIdxStr=>{
+      const colIdx = Number(colIdxStr);
+      const {day, period} = colMeta[colIdx];
+      const val = row[colIdx];
+      if(!val || !String(val).trim()) return;
+      String(val).split(',').forEach(partRaw=>{
+        const part = partRaw.trim();
+        if(!part) return;
+        let subject, cls;
+        let mm = part.match(/^(\d+)학년\s*(.+?)\((\S+)\)$/);
+        if(mm){
+          subject = mm[2];
+          cls = `${mm[1]}-${mm[3]}`;
+        }else{
+          let mm2 = part.match(/^(.+?)\((\S+)\)$/);
+          if(mm2){ subject = mm2[1]; cls = mm2[2]; }
+          else { subject = part; cls = ''; }
+        }
+        out.push({teacher, day, period, subject, cls});
+      });
+    });
+  }
+  return out.length ? out : null;
+}
+
+function handleFile(file){
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try{
+      const data = new Uint8Array(e.target.result);
+      const wb = XLSX.read(data, {type:'array'});
+      const sheet = wb.Sheets[wb.SheetNames[0]];
+
+      let parsed = parseSimpleList(sheet);
+      let formatLabel = '리스트형';
+      if(!parsed){
+        parsed = parseNeisWide(sheet);
+        formatLabel = 'NEIS 전체 교사 시간표';
+      }
+      if(!parsed) throw new Error('no valid rows');
+
+      rows = parsed;
+      uploadStatus.innerHTML = `불러오기 완료 (${formatLabel}) · 총 ${rows.length}건 · 교사 ${new Set(rows.map(r=>r.teacher)).size}명 <span class="tag ok">OK</span>`;
+      distributeArea.style.display = 'block';
+      buildSelectPanel();
+      selected = null;
+      resultPanel.style.display = 'none';
+    }catch(err){
+      uploadStatus.innerHTML = `<span class="tag warn">읽기 실패</span> 지원되는 두 형식 중 하나인지 확인해주세요`;
+    }
+  };
+  reader.readAsArrayBuffer(file);
+}
+
+function buildSelectPanel(){
+  selectPanel.style.display = 'block';
+
+  const teachers = [...new Set(rows.map(r=>r.teacher))].sort();
+  const days = [...new Set(rows.map(r=>r.day))].sort((a,b)=>DAY_ORDER.indexOf(a)-DAY_ORDER.indexOf(b));
+
+  teacherFilter.innerHTML = `<option value="">전체 교사</option>` + teachers.map(t=>`<option value="${t}">${t}</option>`).join('');
+  dayFilter.innerHTML = `<option value="">전체 요일</option>` + days.map(d=>`<option value="${d}">${d}</option>`).join('');
+
+  teacherFilter.onchange = renderScheduleTable;
+  dayFilter.onchange = renderScheduleTable;
+
+  renderScheduleTable();
+}
+
+function renderScheduleTable(){
+  const tFilter = teacherFilter.value;
+  const dFilter = dayFilter.value;
+  let list = rows.filter(r => (!tFilter || r.teacher===tFilter) && (!dFilter || r.day===dFilter));
+  list = list.slice().sort((a,b)=>{
+    if(a.teacher!==b.teacher) return a.teacher.localeCompare(b.teacher);
+    if(a.day!==b.day) return DAY_ORDER.indexOf(a.day)-DAY_ORDER.indexOf(b.day);
+    return Number(a.period)-Number(b.period);
+  });
+
+  let html = `<thead><tr><th>교사</th><th>요일</th><th>교시</th><th>과목</th><th>반</th></tr></thead><tbody>`;
+  if(!list.length){
+    html += `<tr><td colspan="5" class="empty">해당 조건의 수업이 없습니다</td></tr>`;
+  }
+  list.forEach((r,i)=>{
+    const isSel = selected && selected.teacher===r.teacher && selected.day===r.day && selected.period===r.period && selected.cls===r.cls;
+    html += `<tr class="clickable${isSel?' selected':''}" data-idx="${rows.indexOf(r)}">
+      <td>${r.teacher}</td><td><span class="chip">${r.day}</span></td><td><span class="chip">${r.period}교시</span></td><td>${r.subject||''}</td><td>${r.cls||''}</td>
+    </tr>`;
+  });
+  html += `</tbody>`;
+  scheduleTable.innerHTML = html;
+
+  scheduleTable.querySelectorAll('tr.clickable').forEach(tr=>{
+    tr.addEventListener('click', ()=>{
+      const idx = Number(tr.dataset.idx);
+      selected = rows[idx];
+      renderScheduleTable();
+      computeAndRender();
+    });
+  });
+}
+
+function isFree(teacher, day, period){
+  return !rows.some(r => r.teacher===teacher && r.day===day && r.period===period);
+}
+
+// 동아리활동/자율활동/주제선택활동 등 창체 계열은 교체 불가 - 무조건 보강 처리
+const NON_SWAPPABLE_SUBJECT = /자율|자치|동아리|진로활동|주제선택|스포츠클럽|창의적체험/;
+function isNonSwappable(subject){
+  return NON_SWAPPABLE_SUBJECT.test(String(subject||''));
+}
+
+function computeAndRender(){
+  if(!selected) return;
+  resultPanel.style.display = 'block';
+  const {teacher:T, day:D, period:P, subject:Sub, cls:C} = selected;
+  const blockedByType = isNonSwappable(Sub);
+
+  // 교체 후보: 같은 반(C)의 다른 시간 수업(T2,D2,P2,subject2) 중
+  //   해당 수업이 창체 계열이 아니고, T2가 (D,P)에 공강이고, T가 (D2,P2)에 공강인 경우
+  const swapCandidates = [];
+  if(C && !blockedByType){
+    rows.forEach(r=>{
+      if(r.cls===C && !(r.day===D && r.period===P) && r.teacher!==T && !isNonSwappable(r.subject)){
+        const t2FreeAtOrig = isFree(r.teacher, D, P);
+        const tFreeAtOther = isFree(T, r.day, r.period);
+        if(t2FreeAtOrig && tFreeAtOther){
+          swapCandidates.push(r);
+        }
+      }
+    });
+  }
+
+  // 보강 후보: (D,P)에 공강인 전체 교사
+  const allTeachers = [...new Set(rows.map(r=>r.teacher))];
+  const subCandidates = allTeachers.filter(t => t!==T && isFree(t, D, P));
+
+  let html = `<div class="summary-line">결강 대상 — <b>${T}</b> · <span class="chip">${D}</span> <span class="chip">${P}교시</span> · ${Sub||'(과목 미상)'} · ${C||'(반 미상)'}반</div>`;
+
+  html += `<div class="result-block"><span class="tag ok">교체 후보</span><span class="badge-count">${swapCandidates.length}</span>`;
+  if(blockedByType){
+    html += `<div class="placeholder">동아리활동·자율활동·주제선택활동 등 창체 계열은 교체 대상이 아닙니다. 보강으로 처리하세요.</div>`;
+  }else if(swapCandidates.length){
+    html += `<table style="margin-top:8px;"><thead><tr><th>대상 교사</th><th>원래 요일/교시</th><th>과목</th><th>설명</th></tr></thead><tbody>`;
+    swapCandidates.forEach(r=>{
+      html += `<tr><td>${r.teacher}</td><td><span class="chip">${r.day}</span> <span class="chip">${r.period}교시</span></td><td>${r.subject||''}</td>
+        <td>${r.teacher} 선생님이 ${D} ${P}교시에 ${C}반 수업(${Sub||''}) 대신 담당, ${T} 선생님은 ${r.day} ${r.period}교시에 ${r.subject||''} 대신 담당</td></tr>`;
+    });
+    html += `</tbody></table>`;
+  }else{
+    html += `<div class="placeholder">조건을 만족하는 교체 대상이 없습니다.</div>`;
+  }
+  html += `</div>`;
+
+  html += `<div class="result-block" style="margin-top:16px;"><span class="tag warn">보강 후보 (해당 교시 공강 교사)</span><span class="badge-count">${subCandidates.length}</span>`;
+  if(subCandidates.length){
+    html += `<table style="margin-top:8px;"><thead><tr><th>교사</th></tr></thead><tbody>`;
+    subCandidates.forEach(t=>{
+      html += `<tr><td>${t}</td></tr>`;
+    });
+    html += `</tbody></table>`;
+  }else{
+    html += `<div class="placeholder">${D} ${P}교시에 공강인 교사가 없습니다.</div>`;
+  }
+  html += `</div>`;
+
+  resultBody.innerHTML = html;
+}
+
+// 관리자: 현재 파싱된 시간표 데이터를 내장한 배포용 HTML 파일 생성
+distributeBtn.addEventListener('click', () => {
+  const dataJson = JSON.stringify(rows).replace(/</g, '\\u003c'); // 스크립트 종료 태그 오인 방지
+  const output = ORIGINAL_HTML.replace(
+    '<script id="embedded-data" type="application/json">null<\/script>',
+    `<script id="embedded-data" type="application/json">${dataJson}<\/script>`
+  );
+  const blob = new Blob([output], {type:'text/html'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = '대체수업_보강_관리_배포용.html';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+});
+
+// 페이지 로드 시: 관리자가 배포한 데이터가 내장되어 있으면 업로드 없이 바로 사용 모드로 전환
+(function initFromEmbeddedData(){
+  const el = document.getElementById('embedded-data');
+  if(!el) return;
+  let parsed = null;
+  try{ parsed = JSON.parse(el.textContent); }catch(e){ parsed = null; }
+  if(Array.isArray(parsed) && parsed.length){
+    rows = parsed;
+    uploadPanel.style.display = 'none';
+    modeSub.textContent = `배포된 시간표 데이터 사용 중 · 총 ${rows.length}건 · 교사 ${new Set(rows.map(r=>r.teacher)).size}명`;
+    buildSelectPanel();
+  }
+})();
+</script></body></html>
