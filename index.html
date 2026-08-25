@@ -86,6 +86,29 @@
 
   .grid-wrap{ overflow-x:auto; }
 
+  table.ttgrid{ table-layout:fixed; }
+  table.ttgrid th, table.ttgrid td{ padding:0; text-align:center; vertical-align:middle; }
+  table.ttgrid th.ttcorner{ width:56px; background:var(--navy); color:#fff; padding:8px; }
+  table.ttgrid thead th{ background:var(--navy); color:#fff; font-size:13px; padding:10px 4px; }
+  table.ttgrid th.ttperiod{ background:var(--sky); color:var(--navy-dark); font-weight:700; font-size:13px; width:56px; padding:6px; }
+  td.ttcell{ height:56px; min-width:104px; background:#fff; }
+  td.ttempty{ color:#c3cad1; font-size:13px; background:#fbfcfd; }
+  .ttentry{
+    height:100%; padding:6px 6px; cursor:pointer;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
+    border-left:3px solid transparent; transition:background .12s;
+  }
+  .ttentry + .ttentry{ border-top:1px dashed var(--line); }
+  .ttentry:hover{ background:var(--accent-soft); }
+  .ttentry .ttsubject{ font-size:13px; font-weight:700; color:var(--ink); }
+  .ttentry .ttcls{ font-size:11.5px; color:var(--sub); }
+  .ttentry.nonswap{ background:#f5f2ea; }
+  .ttentry.nonswap .ttsubject{ color:#8a6d1f; }
+  .ttentry.selected{
+    background:var(--warn-soft); border-left-color:var(--warn);
+  }
+  .ttentry.selected .ttsubject{ color:var(--warn); }
+
   select, button{
     font-family:var(--sans); font-size:13px; padding:8px 14px;
     border:1px solid var(--line-strong); border-radius:2px; background:#fff; color:var(--ink);
@@ -153,12 +176,9 @@
       <label>교사
         <select id="teacherFilter"></select>
       </label>
-      <label>요일
-        <select id="dayFilter"></select>
-      </label>
     </div>
     <div class="grid-wrap">
-      <table id="scheduleTable"></table>
+      <table id="scheduleTable" class="ttgrid"></table>
     </div>
   </div>
 
@@ -183,7 +203,6 @@ const uploadStatus = document.getElementById('uploadStatus');
 const selectPanel = document.getElementById('selectPanel');
 const resultPanel = document.getElementById('resultPanel');
 const teacherFilter = document.getElementById('teacherFilter');
-const dayFilter = document.getElementById('dayFilter');
 const scheduleTable = document.getElementById('scheduleTable');
 const resultBody = document.getElementById('resultBody');
 const distributeArea = document.getElementById('distributeArea');
@@ -334,45 +353,63 @@ function buildSelectPanel(){
   selectPanel.style.display = 'block';
 
   const teachers = [...new Set(rows.map(r=>r.teacher))].sort();
-  const days = [...new Set(rows.map(r=>r.day))].sort((a,b)=>DAY_ORDER.indexOf(a)-DAY_ORDER.indexOf(b));
 
-  teacherFilter.innerHTML = `<option value="">전체 교사</option>` + teachers.map(t=>`<option value="${t}">${t}</option>`).join('');
-  dayFilter.innerHTML = `<option value="">전체 요일</option>` + days.map(d=>`<option value="${d}">${d}</option>`).join('');
+  teacherFilter.innerHTML = teachers.map(t=>`<option value="${t}">${t}</option>`).join('');
+  teacherFilter.onchange = () => {
+    selected = null;
+    resultPanel.style.display = 'none';
+    renderTimetableGrid();
+  };
 
-  teacherFilter.onchange = renderScheduleTable;
-  dayFilter.onchange = renderScheduleTable;
-
-  renderScheduleTable();
+  renderTimetableGrid();
 }
 
-function renderScheduleTable(){
-  const tFilter = teacherFilter.value;
-  const dFilter = dayFilter.value;
-  let list = rows.filter(r => (!tFilter || r.teacher===tFilter) && (!dFilter || r.day===dFilter));
-  list = list.slice().sort((a,b)=>{
-    if(a.teacher!==b.teacher) return a.teacher.localeCompare(b.teacher);
-    if(a.day!==b.day) return DAY_ORDER.indexOf(a.day)-DAY_ORDER.indexOf(b.day);
-    return Number(a.period)-Number(b.period);
+// 요일×교시 격자로 선택된 교사의 시간표를 실제 시간표처럼 렌더링
+function renderTimetableGrid(){
+  const teacher = teacherFilter.value || [...new Set(rows.map(r=>r.teacher))].sort()[0];
+  if(teacher) teacherFilter.value = teacher;
+
+  const list = rows.filter(r => r.teacher===teacher);
+
+  const days = [...new Set(rows.map(r=>r.day))].sort((a,b)=>DAY_ORDER.indexOf(a)-DAY_ORDER.indexOf(b));
+  const maxPeriod = Math.max(1, ...rows.map(r=>Number(r.period)||0));
+  const periods = Array.from({length:maxPeriod}, (_,i)=>String(i+1));
+
+  // (day, period) -> 해당 교사의 수업 목록 (동시간대 중복 데이터 대비 배열)
+  const byCell = {};
+  list.forEach(r=>{
+    const key = r.day+'_'+r.period;
+    (byCell[key] = byCell[key] || []).push(r);
   });
 
-  let html = `<thead><tr><th>교사</th><th>요일</th><th>교시</th><th>과목</th><th>반</th></tr></thead><tbody>`;
-  if(!list.length){
-    html += `<tr><td colspan="5" class="empty">해당 조건의 수업이 없습니다</td></tr>`;
-  }
-  list.forEach((r,i)=>{
-    const isSel = selected && selected.teacher===r.teacher && selected.day===r.day && selected.period===r.period && selected.cls===r.cls;
-    html += `<tr class="clickable${isSel?' selected':''}" data-idx="${rows.indexOf(r)}">
-      <td>${r.teacher}</td><td><span class="chip">${r.day}</span></td><td><span class="chip">${r.period}교시</span></td><td>${r.subject||''}</td><td>${r.cls||''}</td>
-    </tr>`;
+  let html = `<thead><tr><th class="ttcorner">교시</th>${days.map(d=>`<th>${d}</th>`).join('')}</tr></thead><tbody>`;
+  periods.forEach(p=>{
+    html += `<tr><th class="ttperiod">${p}</th>`;
+    days.forEach(d=>{
+      const entries = byCell[d+'_'+p] || [];
+      if(!entries.length){
+        html += `<td class="ttcell ttempty">–</td>`;
+      }else{
+        html += `<td class="ttcell">` + entries.map(r=>{
+          const isSel = selected && selected.teacher===r.teacher && selected.day===r.day && selected.period===r.period && selected.cls===r.cls;
+          const nonSwap = isNonSwappable(r.subject);
+          return `<div class="ttentry${isSel?' selected':''}${nonSwap?' nonswap':''}" data-idx="${rows.indexOf(r)}">
+            <div class="ttsubject">${r.subject||'(과목 미상)'}</div>
+            <div class="ttcls">${r.cls||''}</div>
+          </div>`;
+        }).join('') + `</td>`;
+      }
+    });
+    html += `</tr>`;
   });
   html += `</tbody>`;
   scheduleTable.innerHTML = html;
 
-  scheduleTable.querySelectorAll('tr.clickable').forEach(tr=>{
-    tr.addEventListener('click', ()=>{
-      const idx = Number(tr.dataset.idx);
+  scheduleTable.querySelectorAll('.ttentry').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      const idx = Number(el.dataset.idx);
       selected = rows[idx];
-      renderScheduleTable();
+      renderTimetableGrid();
       computeAndRender();
     });
   });
