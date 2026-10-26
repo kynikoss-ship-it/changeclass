@@ -1227,19 +1227,24 @@ function teacherFromCell(v){
 }
 function splitMulti(v){ return String(v||'').split(/[,\/·\n]+/).map(x=>x.trim()).filter(Boolean); }
 
-function classifyHeader(label){
-  const s = String(label||'').replace(/\s/g,'');
-  if(!s) return null;
+function headerField(s){
   let field = null;
   if(/교시|^시간$/.test(s)) field = 'period';
   else if(/일자|날짜|날자|월일|일시|월\/일/.test(s)) field = 'date';
   else if(/요일/.test(s)) field = 'day';
-  else if(/학반|학급|학년반|^반$|[^보]반$/.test(s)) field = 'cls';
+  else if(/학반|학급|학년반|교실|^반$|[^보]반$/.test(s)) field = 'cls';
   else if(/학년/.test(s)) field = 'grade';
   else if(/과목|교과/.test(s)) field = 'subject';
   else if(/교사|성명|선생|담당|이름|수업자|보강자|결강자|보결|대체자/.test(s)) field = 'teacher';
   else if(/구분|유형|종류|형태|방법/.test(s)) field = 'type';
   else if(/사유|비고/.test(s)) field = 'reason';
+  return field;
+}
+// label: 위아래 머리글을 합친 이름, leaf: 맨 아래 칸 (예: 「대체과목」 아래 「교사」 → 교사로 판단)
+function classifyHeader(label, leaf){
+  const s = String(label||'').replace(/\s/g,'');
+  if(!s) return null;
+  const field = headerField(String(leaf||'').replace(/\s/g,'')) || headerField(s);
   if(!field) return null;
   // A: 원래 수업(결강) 쪽, B: 바뀐 수업(교체·보강) 쪽
   let side = /변경후|교체후|바뀐|보강|보결|대체|변경|교체교사|수업자|받는/.test(s) ? 'B' : 'A';
@@ -1257,11 +1262,13 @@ function interpretTable(grid, year, docDefaults){
       for(let c=0; c<nCols; c++){
         const parts = [];
         for(let r=s; r<=h; r++){ const t = String((grid[r]||[])[c]||'').trim(); if(t && parts[parts.length-1]!==t) parts.push(t); }
-        cols.push(classifyHeader(parts.join(' ')));
+        cols.push(classifyHeader(parts.join(' '), parts[parts.length-1]));
       }
       const fields = new Set(cols.filter(Boolean).map(x=>x.field));
       if(!(fields.has('period') || fields.has('date')) || !(fields.has('teacher') || fields.has('cls'))) continue;
-      const score = fields.size * 10 - (h - s);
+      // 「원과목 / 대체과목」처럼 위쪽 묶음 머리글까지 포함해야 원래·바뀐 쪽이 구분되므로 (항목, 쪽) 조합 수로 평가
+      const pairs = new Set(cols.filter(Boolean).map(x=>x.field + x.side));
+      const score = pairs.size * 10 - (h - s);
       if(!best || score > best.score) best = {score, cols, start:h+1};
     }
   }
@@ -1288,7 +1295,7 @@ function interpretTable(grid, year, docDefaults){
     if(classifyHeader(cell('A','period')) || classifyHeader(cell('A','teacher'))) continue; // 반복 머리글
 
     const dateCell = cell('A','date');
-    let date = parseKDate(dateCell, year);
+    let date = parseKDate(dateCell, year) || docDefaults.date;
     const dayCell = cell('A','day');
     if(!date && dayCell){ const d = DAY_ORDER.find(x=>dayCell.includes(x)); if(d) date = dateOfDay(d); }
     let periods = parsePeriods(cell('A','period'));
@@ -1325,9 +1332,10 @@ function interpretPlan(doc){
   const text = doc.lines.join('\n');
   const ym = text.match(/(20\d{2})\s*[.년]/);
   const year = ym ? +ym[1] : new Date().getFullYear();
-  const nm = text.match(/(신청자|신청\s*교사|결강\s*교사|교사\s*명|성\s*명)\s*[:：]?\s*([가-힣]{2,4})/);
+  const nm = text.match(/(신청자|신청\s*교사|결강\s*교사|담당\s*교사|교사\s*명|성\s*명)\s*[:：]?\s*([가-힣]{2,4})/);
   const rm = text.match(/사\s*유\s*[:：]?\s*([^\n|]{2,30})/);
-  const docDefaults = {from: nm ? teacherFromCell(nm[2]) : '', reason: rm ? rm[1].trim() : ''};
+  const dm = text.match(/(일\s*시|일\s*자|날\s*짜|결강\s*일)\s*[:：]\s*([^\n|]{4,30})/); // 예: 1. 일시 : 2026년 10월 29일(목요일)
+  const docDefaults = {from: nm ? teacherFromCell(nm[2]) : '', reason: rm ? rm[1].trim() : '', date: dm ? parseKDate(dm[2], year) : ''};
   const out = [];
   doc.tables.forEach(t=>out.push(...interpretTable(t, year, docDefaults)));
   out.forEach(enrichPlanRow);
